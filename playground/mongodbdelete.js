@@ -25,13 +25,13 @@ MongoClient.connect("mongodb://localhost/TodoApp", (err, db) => {
     //     console.log(result);
     // });
     
-    db.collection("Users").deleteMany({name: "Josh Kirby"});
+    // db.collection("Users").deleteMany({name: "Josh Kirby"});
     
-    db.collection("Users").findOneAndDelete({
-        _id: new Object("Pass in ID here")})
-        .then((result) => {
-            console.log(JSON.stringify(result, undefined, 2));
-        });
+    // db.collection("Users").findOneAndDelete({
+    //     _id: new Object("Pass in ID here")})
+    //     .then((result) => {
+    //         console.log(JSON.stringify(result, undefined, 2));
+    // });
     
     // db.close();
 });

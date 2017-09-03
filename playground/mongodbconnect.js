@@ -9,18 +9,27 @@ MongoClient.connect("mongodb://localhost/TodoApp", (err, db) => {
     }
     console.log("Connected to MongoDB server");
     
-    db.collection("Todos").insertOne({
-        text: "Eat lunch",
-        completed: false
+    // db.collection("Todos").insertOne({
+    //     text: "Eat lunch",
+    //     completed: false
+    // }, (err, result) => {
+    //     if (err) {
+    //         return console.log("Unable to instert todo", err);
+    //     }
+        
+    //     console.log(JSON.stringify(result.ops, undefined, 2));
+    // });
+
+    db.collection("Users").insertOne({
+        name: "Josh",
+        age: 19
     }, (err, result) => {
-        if (err) {
-            return console.log("Unable to instert todo", err);
+        if(err) {
+            return console.log(err);
         }
         
         console.log(JSON.stringify(result.ops, undefined, 2));
     });
-
-    
     
     
     db.close();
